@@ -25,6 +25,10 @@
 %\dateretracted{} % Corrected papers include a "Retracted: XXX" date in the original paper.
 \hreflink{https://doi.org/} % If needed use \linebreak
 %\doinum{}
+
+%\bibstyle{numeric}
+\usepackage[super]{nth}
+
 %------------------------------------------------------------------
 % The following line should be uncommented if the LaTeX file is uploaded to arXiv.org
 %\pdfoutput=1
@@ -108,6 +112,35 @@ The UCS test is a straightforward and relatively easy method to evaluate the enh
 The alternative methods of evaluation of stiffness and strength parameters of soil stabilized by various percentages of binders can be performed using seismic tests measured velocities of elastic pressure waves (P-waves). The core principle of the evaluation of velocities of pressure wave consists in the physical theory of waves and elastic properties of soils as a porous media. Thus, measuring P-wave speed enables to estimate the level of stiffness and strength in a soil sample, as used in various geotechnical application (Gheibi and Hedayat, 2018; Jiang et al. 2017, 2021; Lindh and Lemenkova, 2021b; Lacidogna et al. 2019). The technical approach of this method consists in the propagation of elastic waves that penetrate the specimens of soil materials provided at different curing periods. A quantitative assessment of the P-wave velocity gives the value of soil strength and stiffness due to the correlation between these parameters, which is reported in relevant case studies (Ryden et al. 2006; Kurtulus et al. 2010; Lindh and Lemenkova, 2022b; Lin and Wang, 2020). Seismic methods applied to measuring properties of soil demonstrated superiority over common methods due to its non-destructive nature, which enables to measure samples many times, but requires complex tools and advanced methods of data processing (Shi et al. 2017; Sarro et al. 2021). 
 
 This paper deals with experimental trials of five different binders for stabilization of clayey soil: cement, lime, GGBFS and two types of fly ash (energy and bio fly ash). The combinations of blended binders were determined using special techniques of simplex designs, aimed at optimising the proportions of the stabilizing agents. The methodology include soil treatment by blended binders during 90 days, and geotechnical tests according to the SGI standards: strength test for the UCS and seismic measurements (P-wave speed) of the stabilized specimens. The dynamics of soil behaviour stabilized by different binders was statistically analysed and compared on days 7, 14, 28 and 90th. The development in P-wave velocity was compared both for single and blended binders over the complete period of curing (90 days). The results are summarised in tables and visualized on plots in relevant chapters below. 
+
+\section{Experimental workflow}
+
+Workflow optimization using experimental design is an important part of geotechnical works, as it enables to minimize the number of tests. In view of the large amounts of material that should be tested (hundreds of tons), the optimization of work is necessary for economically more effective planning of the workload. To assess the impacts from individual and mixed binders, a simplex mixture design was chosen following the existing methodology (Myers and Montgomery, 1995). The role of trial planning consists of a systematic methodology aimed at finding the optimal and minimal necessary content of the tested binder products which should be added into the soil mixture. The traditional method to optimizing binder mixtures uses the approach which consists in one factor tested at a time. This strategy enables only one parameter to be changed, while keeping all the other parameters as constants. However, by this approach there is a risk of missing both positive and negative interactions between the constituent components of soil-binder mixture. Neither it allows a simultaneous optimization which could be based on the analysis of both technical and environmental requirements of stabilized soil.
+
+The decision regarding which binder mixture is optimal is based on a series of different random trials where various factors can be varied in an unsystematic way. The mentioned above problems can be eliminated if the statistical trial planning is used to support the optimization of binder mixtures. Thus, the trial design ensures that there is a systematic evaluation of binder mixtures, which is achieved through simultaneous taking into account the influence of various factors on the final results (Montgomery, 1996). Specifically for soil testing, in this case we can measure the effects of various combination of binders on the evolution of soil strength over time of curing. By working systematically, the possibility of making a good optimization of blended mixtures of binders is increased with regard to both technical performance, economic gain and environmental impact.  
+
+Laboratory tests on binder proportions and combinations often entails higher costs, which is caused due to many trials in the initial stage. Using this method, high total cost of geotechnical works on soil stabilization intended for road construction can be significantly reduced. Since both the choice of binder components and binder quantities largely affect project economy, the price of works can be reduced in relation to the needs of real project. Therefore, to optimize binder mixtures we used modelling trial design techniques. The approach can be divided into a mixing part and a process control part. Mixture optimization included the mutual proportions of different binders in the final mixture, that is, the ratios of blended binders (Lindh, 2001). The process control optimization stage focuses on the question, how much binder should be used based on the properties of the base soil material, e.g., how much water should be added to balance the ratio and, if necessary, what is the level of contamination as environmental process parameters.
+
+\subsection{Optimization of binder mixture}
+For the two binders, the optimization process is a relatively simple and straightforward process. In this case, all the possible binder combinations can be placed on a straight line that can be described according to equation 1, Figure 1. As long as x or y < 1, the mixture consists of two parts. If x or y=1, the mixture consists of a single binder component. 
+
+\begin{equation}
+y = 1 - x
+\end{equation}
+
+Possible binder combinations with two different binders are represented by a straight line where the endpoints signify one binder, 1.0 = 100\%, i.e., a one-component mixture. Respectively, adding the \nth{2} binder automatically reduces the amount of the \nth{1} binder, so that together they always constitute a total amount of 100\%, see Figure 1. 
+However, for mixtures consisting of three or more binders, the situation becomes more complicated, as the optimal final mixture is hidden among the infinite number of possible mixture combinations. The experimental planning handles this case using simplex method. This method is developed in earlier statistical works (Myers and Montgomery, 1995; Montgomery, 1996) with a general aim to evaluate different types of mixtures with three or more constituent components, which is a very common optimization scenario in real case situations in industry. Figure 2 shows a graph representing all possible mixing ratios for the three components A, B and C, based on the simplex method. The corners represent 100\% of a single binder. The border lines represent mixtures between two different binders, equation (2)-(4). 
+
+\begin{equation}
+y = 1 - x	
+\end{equation}
+\begin{equation}
+z = 1 - y
+\end{equation}
+\begin{equation}
+x = 1 - z
+\end{equation}
+The plane bounded by the edge lines consists of infinitely many combinations of all three binders which can be experimentally mixed and tested. All the possible binder combinations with the three different binders (A, B and C) are represented by a plane bounded by the three straight lines (Figure 2). Here each vertex in the plane represents a single binder, i.e., 1.0 = 100\% of a single component (Myers and Montgomery, 1995).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
