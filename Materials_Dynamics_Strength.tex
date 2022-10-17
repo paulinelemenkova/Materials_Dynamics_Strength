@@ -16,6 +16,8 @@
 \articlenumber{0}
 \pubyear{2022}
 \copyrightyear{2022}
+\usepackage{color, colortbl}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
 %\externaleditor{Academic Editor: Firstname Lastname}
 \datereceived{} 
 %\daterevised{} % Only for the journal Acoustics
@@ -105,13 +107,13 @@ In this regard, blended binders can be considered as an advanced method of soil 
 
 Specifically for Sweden, the performance of single and mixed binders was investigated using deep mixed method \citep{Ahnberg1995,HolmAhnberg}. The most well-known application of blended binders in Sweden is the depth stabilization technique, which follows the long-term tradition of soil treatment in the country \cite{Bjerrum}. Others include using blended binders for shallow soil stabilisation. Stabilization has also gained the increased use in infrastructure projects for treatment of the contaminated soil \citep{Sorengard,LindhLemenkova2022b}. Further, blended binders perform well compared to single binders, because such mixtures are better suitable on soils which with varied grain size \citep{ElMahdi,Syed}. Since the response of such soils varies to the different types of binders, blended mixes can be applied for testing soils with diverse grain content, ranging from a fine-grained clay to a coarse gravel. Moreover, the use of mixed binders can help make cemented soil structure estimates consistent with the in-situ conditions of real projects, such as road engineering. 
 
-However, as the areas of applications increases along with the use of complex mixtures, so do the requirements for the optimization of soil. In the post-treatment of the contaminated soil, it is common for chemically active additives to be used to increase the effect of stabilization with regard to the reduction of the environmental risk. It is also common for cement or slag to be replaced by other binders, such as fly ash or other residual products, with aim to reduce costs of engineering works \citep{Arulrajah,LindhLemenkova2022a,Jaferetal2018}. Besides, in response to the increased societal demands for environmentally sustainably solutions in engineering works, e.g., reduced CO2 emissions, the demands on the environmental impact from binders during the process of soil stabilization are also increasing. Overall, these requirements and new challenges in road construction industry lead to the need to gain access to methods that enable optimization of soil treatment that takes into account both technical performance, economics and environmental aspects to be considered in final project.
+However, as the areas of applications increases along with the use of complex mixtures, so do the requirements for the optimization of soil. In the post-treatment of the contaminated soil, it is common for chemically active additives to be used to increase the effect of stabilization with regard to the reduction of the environmental risk. It is also common for cement or slag to be replaced by other binders, such as fly ash or other residual products, with aim to reduce costs of engineering works \citep{Arulrajah,LindhLemenkova2022a,Jaferetal2018}. Besides, in response to the increased societal demands for environmentally sustainably solutions in engineering works, e.g., reduced $CO_2$ emissions, the demands on the environmental impact from binders during the process of soil stabilization are also increasing. Overall, these requirements and new challenges in road construction industry lead to the need to gain access to methods that enable optimization of soil treatment that takes into account both technical performance, economics and environmental aspects to be considered in final project.
 
 The UCS test is a straightforward and relatively easy method to evaluate the enhancement of strength and stiffness in stabilized soil over time. Because it well reflects both compaction properties and gained strength, it is one of the most frequently used and commonly acceptable methods to evaluate the engineering properties of the stabilized soil, as continuously reported in earlier papers \cite{Eskisar,Feng,Rodriguez,Christensen}. The examples of using UCS tests are diverse and include, for instance, improved methods testing bearing capacity and settlement of cohesive soil in the foundation of building \cite{Alshkane}. Some more advanced methods include predictive modelling by programming techniques to estimate the UCS \cite{Onyelowe}, using artificial intelligence methods \citep{Tabarsa,Sihag,Liuetal2015} and machine learning applications (Suthar, 2020; \citep{Furtney} to UCS estimation.
 
 The alternative methods of evaluation of stiffness and strength parameters of soil stabilized by various percentages of binders can be performed using seismic tests measured velocities of elastic pressure waves (P-waves). The core principle of the evaluation of velocities of pressure wave consists in the physical theory of waves and elastic properties of soils as a porous media. Thus, measuring P-wave speed enables to estimate the level of stiffness and strength in a soil sample, as used in various geotechnical application (Gheibi and Hedayat, 2018; Jiang et al. 2017, \citep{Jiangetal2021,Jiangetal2017,LindhLemenkova2021b,Lacidogna}. The technical approach of this method consists in the propagation of elastic waves that penetrate the specimens of soil materials provided at different curing periods. A quantitative assessment of the P-wave velocity gives the value of soil strength and stiffness due to the correlation between these parameters, which is reported in relevant case studies \citep{LindhLemenkova2022c,LinWang2020,Kurtulus,Ryden}. Seismic methods applied to measuring properties of soil demonstrated superiority over common methods due to its non-destructive nature, which enables to measure samples many times, but requires complex tools and advanced methods of data processing \citep{Sarro,Shietal2017}. 
 
-This paper deals with experimental trials of five different binders for stabilization of clayey soil: cement, lime, GGBFS and two types of fly ash (energy and bio fly ash). The combinations of blended binders were determined using special techniques of simplex designs, aimed at optimising the proportions of the stabilizing agents. The methodology include soil treatment by blended binders during 90 days, and geotechnical tests according to the SGI standards: strength test for the UCS and seismic measurements (P-wave speed) of the stabilized specimens. The dynamics of soil behaviour stabilized by different binders was statistically analysed and compared on days 7, 14, 28 and 90th. The development in P-wave velocity was compared both for single and blended binders over the complete period of curing (90 days). The results are summarised in tables and visualized on plots in relevant chapters below. 
+This paper deals with experimental trials of five different binders for stabilization of clayey soil: cement, lime, GGBFS and two types of fly ash (energy and bio fly ash). The combinations of blended binders were determined using special techniques of simplex designs, aimed at optimising the proportions of the stabilizing agents. The methodology include soil treatment by blended binders during 90 days, and geotechnical tests according to the SGI standards: strength test for the UCS and seismic measurements (P-wave speed) of the stabilized specimens. The dynamics of soil behaviour stabilized by different binders was statistically analysed and compared on days \nth{7}, \nth{14}, \nth{28} and \nth{90}. The development in P-wave velocity was compared both for single and blended binders over the complete period of curing (90 days). The results are summarised in tables and visualized on plots in relevant chapters below. 
 
 \section{Experimental workflow}
 
@@ -140,6 +142,7 @@ z = 1 - y
 \begin{equation}
 x = 1 - z
 \end{equation}
+
 The plane bounded by the edge lines consists of infinitely many combinations of all three binders which can be experimentally mixed and tested. All the possible binder combinations with the three different binders (A, B and C) are represented by a plane bounded by the three straight lines (Figure 2). Here each vertex in the plane represents a single binder, i.e., 1.0 = 100\% of a single component \cite{MyersMontgomery}.
 
 Depending on the scale and amount of works, chosen for simplex method, both linear effects and interaction effects can be identified. These include, for instance, an interaction effect which occurs when two binder components together produce a significantly higher or lower effect on soil strength than their mutual proportions indicate in advance. The level of details however, places different demands on the total number of tested trials. Therefore, the amount of experimental trails should always be reasonably high. The optimal combination of binders is required for the effective soil stabilisation in geotechnical and economic aspects.
@@ -172,13 +175,13 @@ To this end, we used five different binders for soil stabilization: two traditio
 The UCS tests were carried out on stabilized soil using the 10-ton pressure press, Figure 6. The tests were run under the deformation control following the existing methodology SS-EN 13286-41 \cite{SIS2003,SIS2018}. The UCS was performed to achieve the maximum axial compressive stress that a specimen can bear under zero confining stress. In such a way, the specimens were tested using available equipment at SGI (Figure 6 and 7 for schematic and real view, respectively), and a workflow methodology of SIS \cite{SIS2003}. According to the SIS standard (SIS,  2018b), the breaking load must be reached between 30 and 60 seconds. This time was achieved at a deformation rate of 3 to 4 mm/s, Figure 7. No visible connections between the bearing boundaries and fracture surfaces was noted on any of the tested specimens. The specimens exhibited the hourglass-shaped fracture surfaces that were completely independent of the layer boundaries. 
 
 \subsection{P-wave measurements}
-During the curing period of 90 days, the resonant frequency measurements of the elastic waves (free-free resonate column) were performed on soil specimens on days 7, 14, 28 and 90th. The velocity of the pressure waves (P-waves) was assessed and measured in the specimens on several days indicated above along the curing period, to evaluate the dynamics of strength gain. The values of the velocities of P-waves of the stabilized soil specimens were received using the ICP Accelerometer (Model Nr. 352B10), which is a lightweight ceramic shear response device designed by the PCB Piezotronics (https://www.pcb.com). The procedure workflow included the following steps. An impulse force was excited in a tested specimen, and the velocity of pressure wave was recorded by the device. The first arrival time of wave was estimated to compute the travel time of the compression wave. The velocity of the pressure waves was computed using travel time of the pulse propagated through the soil specimens. The data were then transferred to the computer for statistical processing.
+During the curing period of 90 days, the resonant frequency measurements of the elastic waves (free-free resonate column) were performed on soil specimens on days \nth{7}, \nth{14}, \nth{28} and \nth{90}. The velocity of the pressure waves (P-waves) was assessed and measured in the specimens on several days indicated above along the curing period, to evaluate the dynamics of strength gain. The values of the velocities of P-waves of the stabilized soil specimens were received using the ICP Accelerometer (Model Nr. 352B10), which is a lightweight ceramic shear response device designed by the PCB Piezotronics (https://www.pcb.com). The procedure workflow included the following steps. An impulse force was excited in a tested specimen, and the velocity of pressure wave was recorded by the device. The first arrival time of wave was estimated to compute the travel time of the compression wave. The velocity of the pressure waves was computed using travel time of the pulse propagated through the soil specimens. The data were then transferred to the computer for statistical processing.
 
 \subsection{Determination of water content}
 The determination of water content has been performed using the existing guidance and methodology \cite{SIS2014}. The variation in water ratio between the specimens and the difference between before and after the curing time of 90 days is shown in Figure 8. Here blue colour shows the water content before the curing time, while red colour shows water content after the 90 days of curing. Since the samples were paraffined, no water was remaining in the soil samples, but the difference in water ratio can be explained by the chemical reactions during the curing period. The target water ratio for the stabilized material was 5.8\% when the binder was included. The histogram in Figure 8 illustrates the mean pre-storage of 5.89\% with a standard deviation of 0.307 and after storage the mean was 5.37 and the standard deviation was 0.359, which means that the target value was achieved. The variation in water content was not greater than expected. The variations depend, i.a., on the composition of the material used for the water ratio determination. In samples with a low water ratio, there have been more coarser materials and vice versa for those with a high water ratio. This is because coarser grains cannot bind as much water as several smaller grains together can. The measurement was performed as a quality control to discard any statistical outliers. For these reasons, two samples were discarded due to the incorrect values of water quotas. The samples reported in Figure 8 are only include the accepted samples after the statistical evaluation.
 
 \subsection{Freeze-thaw tests}
-The freeze-thaw tests were performed according to the Swedish technical standard SS-EN 137244 \cite{SIS2005}. In this method, sample specimens were frozen for a total of 56 days. The amount of material was measured on days 7, 14, 28, 42 and 56th. The temperature varied and demonstrated the dependance on curing time. No extra water was added during the cycles to ensure the objectivity of experiment. The samples used for freeze-thaw tests were selected from the original soil mass in connection with the UCS tests. Therefore, the specimens that did not hold together could therefore not be tested. For instance, the specimens stabilized by energy fly ash or bio flay ash in large amounts did not stick together and could therefore not be tested. The freeze-thaw tests showed that all the tested samples had a high frost resistance. 
+The freeze-thaw tests were performed according to the Swedish technical standard SS-EN 137244 \cite{SIS2005}. In this method, sample specimens were frozen for a total of 56 days. The amount of material was measured on days \nth{7}, \nth{14}, \nth{28}, \nth{42} and \nth{56}. The temperature varied and demonstrated the dependance on curing time. No extra water was added during the cycles to ensure the objectivity of experiment. The samples used for freeze-thaw tests were selected from the original soil mass in connection with the UCS tests. Therefore, the specimens that did not hold together could therefore not be tested. For instance, the specimens stabilized by energy fly ash or bio flay ash in large amounts did not stick together and could therefore not be tested. The freeze-thaw tests showed that all the tested samples had a high frost resistance. 
 
 The processes of freezing and thawing, that are common environmental and climate induced phenomena in Sweden, often lead to the increase in volume of soil and reduction of strength. Hence, it is important to consider durability of soil as the final goal with regard to the improved soil properties prior to road construction. At the same time, freeze-thaw test results may fluctuate and differ, which depends on the actual field conditions. This is owing to the placement of stabilized soil in in-situ situation below the road pavement. As a result, changes in moisture condition in soil sample may change from saturated to dry. Likewise, stabilized soil sample may not be freeze when saturated due to the local specifics in southern Sweden. 
 
@@ -195,9 +198,87 @@ The velocity of the P-waves propagating specimens stabilized by binary binders a
 The results from the measured P-wave velocities indicating strength gain (UCS) are reported below in Tables 1 to 8 for days 7, 14, 28 and 90, as well as the remaining values for the same days, respectively. 
 The analysis of Table 1, which shows measured values of P-waves on the day 7th of curing period of stabilized soil gives the following remarks. Presence of cement and energy fly ash (combination AD) influences the stabilization characteristics of a soil with P-waves (coefficient 2408.8) by T=47°C. Likewise, the addition of lime and slag (combination BC) into soil results in the increase of P-wave coefficient up to 5474.4. The compound of lime and slag acts as an accelerator for soil hardening and in their presence increase the strength gain. 
 
+%\begin{table}[!ht]
+\begin{table}[H]
+\caption{The effects from various binders on soil stabilization on day \nth{7} of curing time, measured by P-wave velocities}
+\footnotesize
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        Factors & P-wave coeff. & Std. Err. & t (47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+        \rowcolor{LightCyan}
+        (A) Cement & 2538.3 & 217.223 & 11.68544 & 0.000000 & 2101.4 & 2975.35 \\ \hline
+        \rowcolor{LightCyan}
+        (B) Lime & 563.5 & 217.223 & 2.59394 & 0.012613 & 126.5 & 1000.46 \\ \hline
+        (C) GGBFS & 277.5 & 217.223 & 1.27759 & 0.207668 & -159.5 & 714.52 \\ \hline
+        (D) E\_Fly ash & 174.4 & 217.223 & 0.80280 & 0.426134 & -262.6 & 611.38 \\ \hline
+        \rowcolor{LightCyan}
+        (E) B\_Fly ash & 1192.9 & 217.223 & 5.49141 & 0.000002 & 755.9 & 1629.86 \\ \hline
+        AB & 730.2 & 972.388 & 0.75095 & 0.456429 & -1226.0 & 2686.40 \\ \hline
+        AC & 1345.3 & 972.388 & 1.38346 & 0.173061 & -610.9 & 3301.45 \\ \hline
+        \rowcolor{LightCyan}
+        AD & 2408.8 & 972.388 & 2.47718 & 0.016896 & 452.6 & 4364.97 \\ \hline
+        AE & -1599.1 & 972.388 & -1.64453 & 0.106740 & -3555.3 & 357.07 \\ \hline
+        \rowcolor{LightCyan}
+        BC & 5474.4 & 972.388 & 5.62986 & 0.000001 & 3518.2 & 7430.60 \\ \hline
+        BD & 108.9 & 972.388 & 0.11203 & 0.911278 & -1847.3 & 2065.13 \\ \hline
+        BE & -962.7 & 972.388 & -0.99003 & 0.327230 & -2918.9 & 993.50 \\ \hline
+        CD & -18.4 & 972.388 & -0.01892 & 0.984982 & -1974.6 & 1937.79 \\ \hline
+        \rowcolor{LightCyan}
+        CE & 2453.1 & 972.388 & 2.52278 & 0.015086 & 496.9 & 4409.31 \\ \hline
+        DE & -201.2 & 972.388 & -0.20692 & 0.836967 & -2157.4 & 1754.99 \\ \hline
+        ABC & -7209.2 & 6848.162 & -1.05272 & 0.297852 & -20985.9 & 6567.54 \\ \hline
+        ABD & 4591.6 & 6848.162 & 0.67049 & 0.505827 & -9185.1 & 18368.35 \\ \hline
+        ABE & 5768.0 & 6848.162 & 0.84227 & 0.403902 & -8008.7 & 19544.73 \\ \hline
+        ACD & 13776.3 & 6848.162 & 2.01168 & 0.050007 & -0.4 & 27553.01 \\ \hline
+        ACE & 5997.5 & 6848.162 & 0.87578 & 0.385601 & -7779.2 & 19774.24 \\ \hline
+        \rowcolor{LightCyan}
+        ADE & -23505.9 & 6848.162 & -3.43244 & 0.001257 & -37282.6 & -9729.20 \\ \hline
+        BCD & -3246.1 & 6848.162 & -0.47402 & 0.637683 & -17022.9 & 10530.59 \\ \hline
+        BCE & -13506.6 & 6848.162 & -1.97230 & 0.054476 & -27283.3 & 270.12 \\ \hline
+        BDE & 5566.1 & 6848.162 & 0.81279 & 0.420437 & -8210.6 & 19342.84 \\ \hline
+        CDE & 407.6 & 6848.162 & 0.05952 & 0.952793 & -13369.1 & 14184.31 \\ \hline
+        AB(A-B) & 1814.7 & 2064.817 & 0.87886 & 0.383951 & -2339.2 & 5968.55 \\ \hline
+        AC(A-C) & 1048.7 & 2064.817 & 0.50789 & 0.613907 & -3105.2 & 5202.57 \\ \hline
+        AD(A-D) & -3526.9 & 2064.817 & -1.70809 & 0.094218 & -7680.8 & 626.99 \\ \hline
+        \rowcolor{LightCyan}
+        AE(A-E) & 5648.6 & 2064.817 & 2.73563 & 0.008756 & 1494.7 & 9802.45 \\ \hline
+        BC(B-C) & -2271.6 & 2064.817 & -1.10012 & 0.276881 & -6425.4 & 1882.32 \\ \hline
+        BD(B-D) & -265.0 & 2064.817 & -0.12835 & 0.898421 & -4418.9 & 3888.86 \\ \hline
+        BE(B-E) & 3986.1 & 2064.817 & 1.93050 & 0.059591 & -167.7 & 8140.01 \\ \hline
+        CD(C-D) & -277.3 & 2064.817 & -0.13429 & 0.893750 & -4431.2 & 3876.60 \\ \hline
+        CE(C-E) & 75.9 & 2064.817 & 0.03677 & 0.970822 & -4077.9 & 4229.81 \\ \hline
+        DE(D-E) & 528.2 & 2064.817 & 0.25583 & 0.799196 & -3625.6 & 4682.13 \\ \hline
+    \end{tabular}
+\end{table}
+
+\emph{Note}: All the factors are included in the cubic model. The cyan-marked rows indicate a significance level of values below the p = 0.05. Coeffs (recoded comps); Var.:Vp\_rod\_7; R-sqr=.8806; Adj:.7942 (Resultat\_rev091123.sta). 5 Factor mixture design; Mixture total=1., 82 Runs. DV: Vp\_rod\_7; MS Residual=95430.29. Factors are the combinations of binders.
+
 Correspondingly, adding slag (GGBFS) and bio fly ash (combination CE) leads to bonding soil particles, which is also important in providing higher particle friction and better packing. As a result, soil strength increases which is reflected in speed of the elastic waves (P-wave coefficient=2453.1). The measurements were done by T=47°C for all the data in Table 1. Depending on the amount of added slag (type Merit) and Portland cement, bonding soil particles generally increases the UCS values compared to that in the fly ashes, which demonstrated poor or low effects. The improvement is introduced by the glueing of soil particles together with cementitious binder at points of contact by the stabilizing agents. 
 
 Similarly, the combination AE (cement and bio flay ash) also increased the soil strength, as the stabilizer content was increased in specimens. This results in P-wave coefficient reaching 5648.6 m/s. As for triple blends, upon exposure to added slag GGBFS and cement into binder combinations, the compressive strength of a stabilized soil is gradually increased after the day \nth{28}. This proves the important role of cement and lime for stabilization. Thus, the rate of increase may vary for combinations ACD – cement / slag / fly ash (P-wave coeff =13776.3 m/s), ABE – cement / lime / bio fly ash (P-wave coeff.=5768.0), combination ABD – cement / lime / energy fly ash (P-wave coeff.=4591.6). Mechanically, a sandy soil system, when stabilized with either Portland cement, GGBFS or lime, provides improved shear and compressive strength, expressed in UCS, as also reflected in P-waves values. Table 2 shows the remaining notable effects on day \nth{7} of curing period after the backward elimination. Here the combination AE (cement / bio fly ash) demonstrated the highest values of P-wave coefficient (5213.9) followed by the blend BC (lime / slag) with the P-wave coefficient of 4311.8.
+
+%\begin{table}[!ht]
+\begin{table}[H]
+\caption{Remaining significant effects on day \nth{7} after the backward elimination.}
+\footnotesize
+    \centering
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+        Factors & P-wave coeff. & Std. Err. & t (72) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+        (A)Cement & 2643.3 & 138.311 & 19.11103 & 0.000000 & 2367.6 & 2919.0 \\ \hline
+        (B)Lime & 601.7 & 133.783 & 4.49725 & 0.000026 & 335.0 & 868.4 \\ \hline
+        (C)GGBFS & 497.6 & 152.147 & 3.27048 & 0.001649 & 194.3 & 800.9 \\ \hline
+        (D)E\_Fly ash & 272.1 & 134.969 & 2.01612 & 0.047519 & 3.1 & 541.2 \\ \hline
+        (E)B\_Fly ash & 893.4 & 139.921 & 6.38482 & 0.000000 & 614.4 & 1172.3 \\ \hline
+        AD & 2789.3 & 809.587 & 3.44535 & 0.000955 & 1175.4 & 4403.2 \\ \hline
+        BC & 4311.8 & 788.740 & 5.46665 & 0.000001 & 2739.4 & 5884.1 \\ \hline
+        CE & 2368.8 & 790.947 & 2.99492 & 0.003762 & 792.1 & 3945.5 \\ \hline
+        ADE & -27704.7 & 6364.530 & -4.35298 & 0.000044 & -40392.1 & -15017.2 \\ \hline
+        AE(A-E) & 5213.9 & 2104.584 & 2.47741 & 0.015582 & 1018.5 & 9409.3 \\ \hline
+    \end{tabular}
+\end{table}
+\emph{Note}: A significance level below the p = 0.05 is noted for all the recorded values in Table 2. Annotation for Table 2: Coeffs (recoded comps); Var.:Vp\_rod\_7; R-sqr=.8014; Adj:.7765 (Resultat\_rev091123.sta). 5 Factor mixture design; Mixture total=1., 82 Runs DV: Vp\_rod\_7; MS Residual=103610.4. Factors stand for combination of binders.
 
 The analysis of Table 3 demonstrates measured values of P-waves on the day \nth{14} of curing period. Here we can note that the addition of single binders contributed to the increase of P-wave coefficient, which is attributed to the development of its strength. Specifically, added Portland cement resulted in P-waves coefficient raising up to 2645.6, followed by bio fly ash (P-wave coefficient=1476.8) and lime (P-wave coefficient = 781.8), while the effects from the energy fly ash and GGBFS are similar (211.8 and 208.5, respectively). In contrast, blended binders have a more notable effects on the formation of bonded particles, which strengthen a soil that is stabilized with the cement / slag GGBFS (blend AC, P-wave=5229.2), lime / GGBFS (blend BC, P-wave=7920.3) and slag / energy fly ash (blend CE, P-waves=4819.4). As a result, this produces a higher strength, which is mirrored in the measured speed of the elastic waves. 
 
