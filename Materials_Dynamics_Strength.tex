@@ -7,6 +7,8 @@
 \graphicspath{{figures/}} % path to folder with figures
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{longtable}
+\usepackage{array}
 % For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal and change "submit" to "accept". The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
 
 %=================================================================
@@ -23,7 +25,7 @@
 \usepackage{color, colortbl}
 \definecolor{LightCyan}{rgb}{0.88,1,1}
 %\externaleditor{Academic Editor: Firstname Lastname}
-\datereceived{} 
+\datereceived{18 October 2022} 
 %\daterevised{} % Only for the journal Acoustics
 \dateaccepted{} 
 \datepublished{} 
@@ -79,8 +81,8 @@ $^{3}$ \quad Universit\'{e} Libre de Bruxelles, \'{E}cole polytechnique de Bruxe
 \corres{Correspondence: polina.lemenkova@ulb.be; Tel.: +32471860459 (P. Lemenkova)}
 
 % Current address and/or shared authorship
-\firstnote{Current address: Affiliation 3.} 
-\secondnote{These authors contributed equally to this work.}
+%\firstnote{Current address: Affiliation 3.} 
+%\secondnote{These authors contributed equally to this work.}
 % The commands \thirdnote{} till \eighthnote{} are available for further notes
 
 %\simplesumm{} % Simple summary
@@ -113,9 +115,9 @@ Specifically for Sweden, the performance of single and mixed binders was investi
 
 However, as the areas of applications increases along with the use of complex mixtures, so do the requirements for the optimization of soil. In the post-treatment of the contaminated soil, it is common for chemically active additives to be used to increase the effect of stabilization with regard to the reduction of the environmental risk. It is also common for cement or slag to be replaced by other binders, such as fly ash or other residual products, with aim to reduce costs of engineering works \citep{Arulrajah,LindhLemenkova2022a,Jaferetal2018}. Besides, in response to the increased societal demands for environmentally sustainably solutions in engineering works, e.g., reduced $CO_2$ emissions, the demands on the environmental impact from binders during the process of soil stabilization are also increasing. Overall, these requirements and new challenges in road construction industry lead to the need to gain access to methods that enable optimization of soil treatment that takes into account both technical performance, economics and environmental aspects to be considered in final project.
 
-The UCS test is a straightforward and relatively easy method to evaluate the enhancement of strength and stiffness in stabilized soil over time. Because it well reflects both compaction properties and gained strength, it is one of the most frequently used and commonly acceptable methods to evaluate the engineering properties of the stabilized soil, as continuously reported in earlier papers \cite{Eskisar,Feng,Rodriguez,Christensen}. The examples of using UCS tests are diverse and include, for instance, improved methods testing bearing capacity and settlement of cohesive soil in the foundation of building \cite{Alshkane}. Some more advanced methods include predictive modelling by programming techniques to estimate the UCS \cite{Onyelowe}, using artificial intelligence methods \citep{Tabarsa,Sihag,Liuetal2015} and machine learning applications (Suthar, 2020; \citep{Furtney} to UCS estimation.
+The UCS test is a straightforward and relatively easy method to evaluate the enhancement of strength and stiffness in stabilized soil over time. Because it well reflects both compaction properties and gained strength, it is one of the most frequently used and commonly acceptable methods to evaluate the engineering properties of the stabilized soil, as continuously reported in earlier papers \cite{Eskisar,Feng,Rodriguez,Christensen}. The examples of using UCS tests are diverse and include, for instance, improved methods testing bearing capacity and settlement of cohesive soil in the foundation of building \cite{Alshkane}. Some more advanced methods include predictive modelling by programming techniques to estimate the UCS \cite{Onyelowe}, using artificial intelligence methods \citep{Tabarsa,Sihag,Liuetal2015} and machine learning applications  \citep{Furtney,Sihag} to UCS estimation.
 
-The alternative methods of evaluation of stiffness and strength parameters of soil stabilized by various percentages of binders can be performed using seismic tests measured velocities of elastic pressure waves (P-waves). The core principle of the evaluation of velocities of pressure wave consists in the physical theory of waves and elastic properties of soils as a porous media. Thus, measuring P-wave speed enables to estimate the level of stiffness and strength in a soil sample, as used in various geotechnical application (Gheibi and Hedayat, 2018; Jiang et al. 2017, \citep{Jiangetal2021,Jiangetal2017,LindhLemenkova2021b,Lacidogna}. The technical approach of this method consists in the propagation of elastic waves that penetrate the specimens of soil materials provided at different curing periods. A quantitative assessment of the P-wave velocity gives the value of soil strength and stiffness due to the correlation between these parameters, which is reported in relevant case studies \citep{LindhLemenkova2022c,LinWang2020,Kurtulus,Ryden}. Seismic methods applied to measuring properties of soil demonstrated superiority over common methods due to its non-destructive nature, which enables to measure samples many times, but requires complex tools and advanced methods of data processing \citep{Sarro,Shietal2017}. 
+The alternative methods of evaluation of stiffness and strength parameters of soil stabilized by various percentages of binders can be performed using seismic tests measured velocities of elastic pressure waves (P-waves). The core principle of the evaluation of velocities of pressure wave consists in the physical theory of waves and elastic properties of soils as a porous media. Thus, measuring P-wave speed enables to estimate the level of stiffness and strength in a soil sample, as used in various geotechnical application \citep{Gheibi,Jiangetal2021,Jiangetal2017,LindhLemenkova2021b,Lacidogna}. The technical approach of this method consists in the propagation of elastic waves that penetrate the specimens of soil materials provided at different curing periods. A quantitative assessment of the P-wave velocity gives the value of soil strength and stiffness due to the correlation between these parameters, which is reported in relevant case studies \citep{LindhLemenkova2022c,LinWang2020,Kurtulus,Ryden}. Seismic methods applied to measuring properties of soil demonstrated superiority over common methods due to its non-destructive nature, which enables to measure samples many times, but requires complex tools and advanced methods of data processing \citep{Sarro,Shietal2017}. 
 
 This paper deals with experimental trials of five different binders for stabilization of clayey soil: cement, lime, GGBFS and two types of fly ash (energy and bio fly ash). The combinations of blended binders were determined using special techniques of simplex designs, aimed at optimising the proportions of the stabilizing agents. The methodology include soil treatment by blended binders during 90 days, and geotechnical tests according to the SGI standards: strength test for the UCS and seismic measurements (P-wave speed) of the stabilized specimens. The dynamics of soil behaviour stabilized by different binders was statistically analysed and compared on days \nth{7}, \nth{14}, \nth{28} and \nth{90}. The development in P-wave velocity was compared both for single and blended binders over the complete period of curing (90 days). The results are summarised in tables and visualized on plots in relevant chapters below. 
 
@@ -223,18 +225,16 @@ To this end, we used five different binders for soil stabilization: two traditio
 \end{enumerate}
 
 \subsection{Uniaxial Compressive Strength (UCS)}
-The UCS tests were carried out on stabilized soil using the 10-ton pressure press, Figure \ref{fig:04a}. The tests were run under the deformation control following the existing methodology SS-EN 13286-41 \cite{SIS2003,SIS2018}. The UCS was performed to achieve the maximum axial compressive stress that a specimen can bear under zero confining stress. In such a way, the specimens were tested using available equipment at SGI (Figure \ref{fig:04a} and \ref{fig:04b} for schematic and real view, respectively), and a workflow methodology of SIS \cite{SIS2003}. According to the SIS standard (SIS, 2018b), the breaking load must be reached between 30 and 60 seconds. This time was achieved at a deformation rate of 3 to 4 mm/s, Figure \ref{fig:04b}. No visible connections between the bearing boundaries and fracture surfaces was noted on any of the tested specimens. The specimens exhibited the hourglass-shaped fracture surfaces that were completely independent of the layer boundaries. 
+The UCS tests were carried out on stabilized soil using the 10-ton pressure press, Figure \ref{fig:04a}. The tests were run under the deformation control following the existing methodology SS-EN 13286-41 \cite{SIS2003,SIS2018}.  
 
 \begin{figure}[H]
      \centering
-     %\begin{subfigure}[b]{0.45\textwidth}
      \begin{subfigure}{.48\linewidth}
          \centering
        	  	\includegraphics[width=6.3cm]{Fig_04a.jpg}
          \caption{Scheme of the equipment}
          \label{fig:04a}
      \end{subfigure} \hfill %\hspace{1mm}
-  %  \begin{subfigure}[b]{0.45\textwidth}
   \begin{subfigure}{.48\linewidth}
          \centering
          	\includegraphics[width=6.0cm]{Fig_04b.jpg}
@@ -244,6 +244,8 @@ The UCS tests were carried out on stabilized soil using the 10-ton pressure pres
         \caption{Compaction equipment for the stabilized soil (a); Specimen that reached failure during the UCS test (b).}
         \label{fig:04}
 \end{figure}
+
+The UCS was performed to achieve the maximum axial compressive stress that a specimen can bear under zero confining stress. In such a way, the specimens were tested using available equipment at SGI (Figure \ref{fig:04a} and \ref{fig:04b} for schematic and real view, respectively), and a workflow methodology of SIS \cite{SIS2003}. According to the SIS standard \cite{SIS2018}, the breaking load must be reached between 30 and 60 seconds. This time was achieved at a deformation rate of 3 to 4 mm/s, Figure \ref{fig:04b}. No visible connections between the bearing boundaries and fracture surfaces was noted on any of the tested specimens. The specimens exhibited the hourglass-shaped fracture surfaces that were completely independent of the layer boundaries. 
 
 \subsection{P-wave measurements}
 During the curing period of 90 days, the resonant frequency measurements of the elastic waves (free-free resonate column) were performed on soil specimens on days \nth{7}, \nth{14}, \nth{28} and \nth{90}. The velocity of the pressure waves (P-waves) was assessed and measured in the specimens on several days indicated above along the curing period, to evaluate the dynamics of strength gain. The values of the velocities of P-waves of the stabilized soil specimens were received using the ICP Accelerometer (Model Nr. 352B10), which is a lightweight ceramic shear response device designed by the PCB Piezotronics (https://www.pcb.com). The procedure workflow included the following steps. An impulse force was excited in a tested specimen, and the velocity of pressure wave was recorded by the device. The first arrival time of wave was estimated to compute the travel time of the compression wave. The velocity of the pressure waves was computed using travel time of the pulse propagated through the soil specimens. The data were then transferred to the computer for statistical processing.
@@ -268,35 +270,50 @@ The processes of freezing and thawing, that are common environmental and climate
 \section{Results and Discussion}
 The dynamics of P-wave velocity, corresponding to soil strength, as a function of curing time is shown in Figure \ref{fig:06}. For the interpretability reasons, only the values of the soil specimens stabilized by one type of binder are shown. For soils that are sandy, added energy fly ash and bio fly ash at all ages of curing the sandy soil exhibited almost no effects on the compressive strength (brown lines in Figure \ref{fig:06}) with very low values of P-waves (<250 m/s).  Moreover, the dynamics remain stables for this case and did not change significantly for the period of 90 days. In contrast, stabilization of soil by bio fly ash shown clearly visible sharp increase in the P-wave velocity starting from day 28 from 350 m/s up to 3000 and 3100 for the two different types of bio flay ash (blue line in Figure \ref{fig:06}).
 
-\begin{figure}[H]
-      	\centering
-         		\includegraphics[width=14.0cm]{Fig_06.jpg}
-     \caption{P-wave velocity as a function of curing time for individual binders} \label{fig:06}
-\end{figure}
-
 Figure \ref{fig:06} furthermore shows the effects from cement, which already demonstrated strong effects on strength gain at an early age on the specimen. The reaction of the two types of cement with different soil specimens was different, but the general trend is comparative: the values of P-waves start from 2400 and 265 m/s for the two types of cement and gradually continue to gain in strength until the P-waves are recorded at speed of 2600 and 3000 m/s, respectively. With sandy soil, the reaction of Portland cement type Cem II / A-V with the sandy fraction is comparable for both types. The gap in the P-wave speed for lime (purple line in Figure \ref{fig:06}) and bio fly ash (green line in Figure \ref{fig:06}) between 28 and 90 days is caused by the disturbances during cutting and demolding process of the specimens. 
 
 This disturbance has not affected the tested specimens with high strength (cement and slag), i.e., the bond between the particles of the specimens stabilized with lime, energy ash and bio fly ash has been so small that they have been broken during handling. Furthermore, Figure \ref{fig:06} indicates that lime, energy ash and bio fly ash have actively bounded the aggregates and for the small elongation levels that arise in the connection with seismic measurements, the bonds remain intact because for the larger elongation levels that arise during cutting and demolding, so the bonds are damaged. The strength of soil stabilized by lime reaches its peak on day \nth{28} when the values of P-waves are recorded as 950 and 1250 m/s for two sets of measurements. Afterwards, the gain in strength decreases and values of P-waves dropped until 500 m/s. 
 
-The velocity of the P-waves propagating specimens stabilized by binary binders are shown in Figure \ref{fig:07}. Specifically, it shows the samples stabilized by cement (as a reference), slag and blended binary mixtures in combinations for binders as slag / lime (proportions: 0.67 / 0.33) and lime / slag (proportions: 0.67 / 0.33). A comparison between the slag and the binary binders containing lime and slag shows a faster curing process when the slag is combined with lime. Figure \ref{fig:07} furthermore shows that the two binary binders lime / slag and slag / lime have the equally high or higher compression wave velocity at 90 days as cement. This can be compared with the compressive strength values reported for the day 90th for the strength measurements of soil stabilized by cement, lime and GGBFS (Tables 7 and 8). Thus, from Table 7 we can see that in terms of strength, cement and slag / lime (0.67 / 0.33) are equivalent, because soil stabilized by binary binders lime / slag (0.67 / 0.33) has a clearly lower strength. This phenomenon may have been owing to the nonlinearities of the stabilized soil material, i. e., elongation-dependent stiffness.
+\begin{figure}[H]
+      	\centering
+         	\includegraphics[width=13.0cm]{Fig_06.jpg}
+     \caption{P-wave velocity as a function of curing time for individual binders} \label{fig:06}
+\end{figure}
+
+The velocity of the P-waves propagating specimens stabilized by binary binders are shown in Figure \ref{fig:07}. 
 
 \begin{figure}[H]
       	\centering
-         		\includegraphics[width=14.0cm]{Fig_07.jpg}
+         		\includegraphics[width=13.0cm]{Fig_07.jpg}
      \caption{P-wave velocity as a function of curing time for individual and blended binary binders} \label{fig:07}
 \end{figure}
+
+Specifically, it shows the samples stabilized by cement (as a reference), slag and blended binary mixtures in combinations for binders as slag / lime (proportions: 0.67 / 0.33) and lime / slag (proportions: 0.67 / 0.33). A comparison between the slag and the binary binders containing lime and slag shows a faster curing process when the slag is combined with lime. Figure \ref{fig:07} furthermore shows that the two binary binders lime / slag and slag / lime have the equally high or higher compression wave velocity at 90 days as cement. This can be compared with the compressive strength values reported for the day 90th for the strength measurements of soil stabilized by cement, lime and GGBFS (Tables 7 and 8). Thus, from Table 7 we can see that in terms of strength, cement and slag / lime (0.67 / 0.33) are equivalent, because soil stabilized by binary binders lime / slag (0.67 / 0.33) has a clearly lower strength. This phenomenon may have been owing to the nonlinearities of the stabilized soil material, i. e., elongation-dependent stiffness.
 
 The results from the measured P-wave velocities indicating strength gain (UCS) are reported below in Tables 1 to 8 for days 7, 14, 28 and 90, as well as the remaining values for the same days, respectively. 
 The analysis of Table \ref{tab:1}, which shows measured values of P-waves on the day \nth{7} of curing period of stabilized soil gives the following remarks. Presence of cement and energy fly ash (combination AD) influences the stabilization characteristics of a soil with P-waves (coefficient 2408.8) by T=47°C. Likewise, the addition of lime and slag (combination BC) into soil results in the increase of P-wave coefficient up to 5474.4. The compound of lime and slag acts as an accelerator for soil hardening and in their presence increase the strength gain. 
 
 %\begin{table}[!ht]
-\begin{table}[H]
-\caption{The effects from various binders on soil stabilization on day \nth{7} of curing time, measured by P-wave velocities}
-\footnotesize
-    \centering
-    \begin{tabular}{|l|l|l|l|l|l|l|}
-    \hline
-        Factors & P-wave coeff. & Std. Err. & t (47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+%\begin{table}[H]
+%\caption{The effects from various binders on soil stabilization on day \nth{7} of curing time, measured by P-wave velocities}
+%\footnotesize
+   % \centering
+    %\begin{tabular}{|l|l|l|l|l|l|l|}
+    %\hline
+ {\footnotesize
+\begin{center}
+\begin{longtable}{|l|l|l|l|l|l|l|}
+\caption{The effects from various binders on soil stabilization on day \nth{7} of curing time, measured by P-wave velocities}\label{tab:1}\\    
+\hline
+%\rowcolor{LightCyan}
+	Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+\endfirsthead
+
+\multicolumn{7}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+	Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+\endhead
+
         \rowcolor{LightCyan}
         (A) Cement & 2538.3 & 217.223 & 11.68544 & 0.000000 & 2101.4 & 2975.35 \\ \hline
         \rowcolor{LightCyan}
@@ -340,15 +357,18 @@ The analysis of Table \ref{tab:1}, which shows measured values of P-waves on the
         CD(C-D) & -277.3 & 2064.817 & -0.13429 & 0.893750 & -4431.2 & 3876.60 \\ \hline
         CE(C-E) & 75.9 & 2064.817 & 0.03677 & 0.970822 & -4077.9 & 4229.81 \\ \hline
         DE(D-E) & 528.2 & 2064.817 & 0.25583 & 0.799196 & -3625.6 & 4682.13 \\ \hline
-    \end{tabular}
-    \label{tab:1}
-\end{table}
+%    \end{tabular}
+ %   \label{tab:1}
+%\end{table}
+\end{longtable}
+\end{center}
+}
 
 \emph{Note}: All the factors are included in the cubic model. The cyan-marked rows indicate a significance level of values below the p = 0.05. Coeffs (recoded comps); Var.:Vp\_rod\_7; R-sqr=.8806; Adj:.7942 (Resultat\_rev091123.sta). 5 Factor mixture design; Mixture total=1., 82 Runs. DV: Vp\_rod\_7; MS Residual=95430.29. Factors are the combinations of binders.
 
-Correspondingly, adding slag (GGBFS) and bio fly ash (combination CE) leads to bonding soil particles, which is also important in providing higher particle friction and better packing. As a result, soil strength increases which is reflected in speed of the elastic waves (P-wave coefficient=2453.1). The measurements were done by T=47°C for all the data in Table \ref{tab:1}. Depending on the amount of added slag (type Merit) and Portland cement, bonding soil particles generally increases the UCS values compared to that in the fly ashes, which demonstrated poor or low effects. The improvement is introduced by the glueing of soil particles together with cementitious binder at points of contact by the stabilizing agents. 
+Correspondingly, adding slag (GGBFS) and bio fly ash (combination CE) leads to bonding soil particles, which is also important in providing higher particle friction and better packing. As a result, soil strength increases which is reflected in speed of the elastic waves (P-wave coefficient=2453.1). The measurements were done by T=47°C for all the data in Table \ref{tab:1}. Depending on the amount of added slag (type Merit) and Portland cement, bonding soil particles generally increases the UCS values compared to that in the fly ashes, which demonstrated poor or low effects. The improvement is introduced by glueing of soil particles with cementitious binder at the points of contact by stabilizing agents. 
 
-Similarly, the combination AE (cement and bio flay ash) also increased the soil strength, as the stabilizer content was increased in specimens. This results in P-wave coefficient reaching 5648.6 m/s. As for triple blends, upon exposure to added slag GGBFS and cement into binder combinations, the compressive strength of a stabilized soil is gradually increased after the day \nth{28}. This proves the important role of cement and lime for stabilization. Thus, the rate of increase may vary for combinations ACD – cement / slag / fly ash (P-wave coeff =13776.3 m/s), ABE – cement / lime / bio fly ash (P-wave coeff.=5768.0), combination ABD – cement / lime / energy fly ash (P-wave coeff.=4591.6). Mechanically, a sandy soil system, when stabilized with either Portland cement, GGBFS or lime, provides improved shear and compressive strength, expressed in UCS, as also reflected in P-waves values. Table \ref{tab:2} shows the remaining notable effects on day \nth{7} of curing period after the backward elimination. Here the combination AE (cement / bio fly ash) demonstrated the highest values of P-wave coefficient (5213.9) followed by the blend BC (lime / slag) with the P-wave coefficient of 4311.8.
+Similarly, the combination AE (cement and bio flay ash) also increased the soil strength, as the stabilizer content was increased in specimens. This results in P-wave coefficient reaching 5648.6 m/s. As for triple blends, upon exposure to added slag GGBFS and cement into binder blends, the compressive strength of a stabilized soil is gradually increased after the day \nth{28}. This proves the important role of cement and lime for stabilization. Thus, the rate of increase may vary for blends ACD – cement / slag / fly ash (P-wave coeff =13776.3 m/s), ABE – cement / lime / bio fly ash (P-wave coeff.=5768.0), combination ABD – cement / lime / energy fly ash (P-wave coeff.=4591.6). Mechanically, a sandy soil system, when stabilized with either Portland cement, GGBFS or lime, provides improved shear and compressive strength, expressed in UCS, as also reflected in P-waves values. Table \ref{tab:2} shows the remaining notable effects on day \nth{7} of curing period after backward elimination. Here the combination AE (cement / bio fly ash) demonstrated the highest values of P-wave coefficient (5213.9) followed by the blend BC (lime / slag) with the P-wave coefficient of 4311.8.
 
 %\begin{table}[!ht]
 \begin{table}[H]
@@ -375,13 +395,26 @@ Similarly, the combination AE (cement and bio flay ash) also increased the soil 
 
 The analysis of Table \ref{tab:3} demonstrates measured values of P-waves on the day \nth{14} of curing period. Here we can note that the addition of single binders contributed to the increase of P-wave coefficient, which is attributed to the development of its strength. Specifically, added Portland cement resulted in P-waves coefficient raising up to 2645.6, followed by bio fly ash (P-wave coefficient=1476.8) and lime (P-wave coefficient = 781.8), while the effects from the energy fly ash and GGBFS are similar (211.8 and 208.5, respectively). In contrast, blended binders have a more notable effects on the formation of bonded particles, which strengthen a soil that is stabilized with the cement / slag GGBFS (blend AC, P-wave=5229.2), lime / GGBFS (blend BC, P-wave=7920.3) and slag / energy fly ash (blend CE, P-waves=4819.4). As a result, this produces a higher strength, which is mirrored in the measured speed of the elastic waves. 
 
-\begin{table}[H]
-\caption{The effects from various binders on soil stabilization on day \nth{14} of curing time, measured by P-wave velocities}
-\footnotesize
-    \centering
-    \begin{tabular}{|l|l|l|l|l|l|l|}
-    \hline
-        Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+%\begin{table}[H]
+%\caption{The effects from various binders on soil stabilization on day \nth{14} of curing time, measured by P-wave velocities}
+%\footnotesize
+  %  \centering
+   % \begin{tabular}{|l|l|l|l|l|l|l|}
+    %\hline
+ 
+ {\footnotesize
+\begin{center}
+\begin{longtable}{|l|l|l|l|l|l|l|}
+\caption{The effects from various binders on soil stabilization on day \nth{14} of curing time, measured by P-wave velocities}\label{tab:3}\\    
+\hline
+%\rowcolor{LightCyan}
+	Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+\endfirsthead
+
+\multicolumn{7}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+	Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+\endhead
         \rowcolor{LightCyan}
         (A)Cement & 2645.6 & 202.397 & 13.07116 & 0.000000 & 2238.4 & 3052.7 \\ \hline
         \rowcolor{LightCyan}
@@ -430,9 +463,13 @@ The analysis of Table \ref{tab:3} demonstrates measured values of P-waves on the
         CD(C-D) & 472.9 & 1923.886 & 0.24582 & 0.806890 & -3397.4 & 4343.3 \\ \hline
         CE(C-E) & 2542.3 & 1923.886 & 1.32143 & 0.192754 & -1328.1 & 6412.6 \\ \hline
         DE(D-E) & 818.4 & 1923.886 & 0.42541 & 0.672482 & -3051.9 & 4688.8 \\ \hline
-    \end{tabular}
-    \label{tab:3}
-\end{table}
+%    \end{tabular}
+  %  \label{tab:3}
+%\end{table}
+\end{longtable}
+\end{center}
+}
+
 \emph{Note}: All the factors included in the cubic model. The cyan-marked rows indicate a significance level of values below the p = 0.05.Coeffs (recoded comps); Var.:Vp\_rod\_14; R-sqr=.9207; Adj:.8633 (Resultat\_rev091123.sta). 5 Factor mixture design; Mixture total=1., 82 Runs. DV: Vp\_rod\_14; MS Residual=82847.91. Factors indicate combination of binders.
 
 Table \ref{tab:4} shows the remaining effects on day \nth{14} after the backward elimination. We observe here that Portland cement and lime have different effects on stabilization (compare P-wave coefficient for cement P-wave=2572.1 against P-wave=872.6 for lime), since they differ in their chemical nature, although bot provide calcium, which is necessary for soil hardening. A notably high value is shown by bio fly ash (P-wave=1192.2) due to its mode of reaction with particles. Notably high values are also demonstrated by combinations AC (cement / GGBFS, P-wave=4811.3), AD (cement / energy fly ash P-wave=3085.3), BC (lime / slag P-wave=6901.9) and CE (GGBFS / bio fly ash, P-wave=4756.8). This well demonstrate that reaction-products may eventually differ in real cases of soil stabilization by blended binders. Moreover, certain triple combinations demonstrated negative values, such as, for instance ADE (Portland cement / energy fly ash / bio fly ash, P-waves=-29959.3). Clearly, adding cement as a stabilizing agent is beneficial for soil, as it produces strength-developing hydration product in a soil mixture through bonding with particles, which finally leads to the improved strength of soil. 
@@ -465,13 +502,26 @@ Table \ref{tab:4} shows the remaining effects on day \nth{14} after the backward
 
 The inspection of Table \ref{tab:5}, showing the results showing P-wave velocities on the day \nth{28} of curing period by temperature 46°C, produces following remarks. The differences in values of P-waves, compared to the previous Tables on days \nth{7} and \nth{14} shows the time of reaction plays an important role on the stabilization in soils, which generally results from the chemical processes caused by the stabilizing agent as binder or the blended mixture of double of triple binders. These factors include the two different processes. The flocculation effects come to the effect immediate upon the contact of binder with soil particles. On the contrary, pozzolanic and hydration effects are generally time-dependent. Therefore, we can see the differences in stabilisation, as reflected by the P-waves speed on days \nth{7} , \nth{14} and \nth{28} by the same stabilizing agents. For instance the combinations of cement / lime (blend AB) or cement / GGBSF (blend AC) for the day 28th, which give the P-wave coefficients as 928.1 and 5917.3 against similar values on day \nth{14} and \nth{7}. Thus, P-wave coefficients for the combination AB for day \nth{14}:  828.6 and for the day 7:  730.2, respectively. Likewise, for the combination AC P-waves are recorded as 1345.3 for day \nth{7} and 5229.2 for day \nth{14}. This can be explained by the inherent nature of Portland cement, in addition to added binders, which contributes to the increase of strength and plasticity reduction over time of curing. 
 
-\begin{table}[H]
-\caption{The effects from various binders on soil stabilization on day \nth{28} of curing, measured by P-wave velocities}
-\footnotesize
-    \centering
-    \begin{tabular}{|l|l|l|l|l|l|l|}
-    \hline
-        Factors & P-wave coefficient & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+%\begin{table}[H]
+%\caption{The effects from various binders on soil stabilization on day \nth{28} of curing, measured by P-wave velocities}
+%\footnotesize
+  %  \centering
+    %\begin{tabular}{|l|l|l|l|l|l|l|}
+   % \hline
+ 
+ {\footnotesize
+\begin{center}
+\begin{longtable}{|l|l|l|l|l|l|l|}
+\caption{The effects from various binders on soil stabilization on day \nth{28} of curing, measured by P-wave velocities}\label{tab:5}\\    
+\hline
+%\rowcolor{LightCyan}
+	 Factors & P-wave coefficient & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+\endfirsthead
+
+\multicolumn{7}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+	 Factors & P-wave coefficient & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+\endhead
         \rowcolor{LightCyan}
         (A)Cement & 2757.6 & 227.599 & 12.11585 & 0.000000 & 2299.7 & 3215.4 \\ \hline
         \rowcolor{LightCyan}
@@ -521,9 +571,13 @@ The inspection of Table \ref{tab:5}, showing the results showing P-wave velociti
         \rowcolor{LightCyan}
         CE(C-E) & 6361.9 & 2163.448 & 2.94064 & 0.005068 & 2009.6 & 10714.2 \\ \hline
         DE(D-E) & -1936.1 & 2163.448 & -0.89490 & 0.375400 & -6288.4 & 2416.2 \\ \hline
-    \end{tabular}
-    \label{tab:5}
-\end{table}
+ %   \end{tabular}
+  %  \label{tab:5}
+%\end{table}
+\end{longtable}
+\end{center}
+}
+
 \emph{Note}: All the factors included in the cubic model. The cyan-marked rows indicate a significance level of values below the p = 0.05. Coeffs (recoded comps); Var.:Vp\_rod\_28\_f; R-sqr=.9152; Adj:.8538 (Resultat\_rev091123.sta) 5 Factor mixture design; Mixture total=1., 82 Runs. DV: Vp\_rod\_28\_f; MS Residual=104764.9. Factors signify the combination of binders.
 
 Table \ref{tab:6} shows the remaining significant effects on soil stabilization from different binders on day \nth{28} after the backward elimination. The dynamics in P-waves which generally increases over time is explained by the increased soil strength as a results of stabilization, where plasticity of soil is reduced and particles are bonded to each other in soil-blend mixture. Thus, the compressive strength and load-bearing properties of soil are improved, which leads to the increased stiffness and compaction of the soil and reduced porosity. Such changes lead to the increased P-wave velocity increased in the more dense structure, which is the results of complex chemical processes performed in soil through the presence of a stabilizing agents. 
@@ -555,12 +609,26 @@ Table \ref{tab:6} shows the remaining significant effects on soil stabilization 
 
 Table \ref{tab:7} shows that slag is the main factor that contributes most to the compressive strength among other binders followed by Portland cement, which comes the \nth{2} in terms of strength. The combination of slag and energy ash has the least impact on compressive strength. Furthermore, Table \ref{tab:7} shows linear effects between cement, lime and slag as factors affecting soil stabilization and gain of strength when comparing the values of P-waves, corresponding to the gain of strength over curing time of 3 months. By closer examination of Table \ref{tab:7}, the effects from lime and slag that can be seen that are reflected in the seismic measurements (\nth{7}, \nth{14} and \nth{28} daily values in Tables \ref{tab:1}, \ref{tab:3} and \ref{tab:5}, respectively) cannot be confirmed for the values of strength recorded on day \nth{90}. Here high values are demonstrated by the blend lime / slag (BC, P-wave=6004.0), Lime / energy fly slag (BD, P-waves=4620.5) and cement / slag (AC, 5147.8).
 
-\begin{table}[H]
-\caption{The effects from various binders on soil stabilization on day \nth{90} of curing time, measured by P-wave velocities}
-\footnotesize
-    \centering
-    \begin{tabular}{|l|l|l|l|l|l|l|}
-    \hline
+%\begin{table}[H]
+%\caption{The effects from various binders on soil stabilization on day \nth{90} of curing time, measured by P-wave velocities}
+%\footnotesize
+   % \centering
+    %\begin{tabular}{|l|l|l|l|l|l|l|}
+    %\hline
+    
+ {\footnotesize
+\begin{center}
+\begin{longtable}{|l|l|l|l|l|l|l|}
+\caption{The effects from various binders on soil stabilization on day \nth{90} of curing time, measured by P-wave velocities}\label{tab:7}\\    
+\hline
+\rowcolor{LightCyan}
+	 Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+\endfirsthead
+
+\multicolumn{7}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+	 Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+\endhead
         Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
         \rowcolor{LightCyan}
         (A)Cement & 5992.1 & 338.88 & 17.68189 & 0.000000 & 5310.3 & 6673.8 \\ \hline
@@ -613,9 +681,13 @@ Table \ref{tab:7} shows that slag is the main factor that contributes most to th
         \rowcolor{LightCyan}
         CE(C-E) & 7909.8 & 3221.24 & 2.45551 & 0.017822 & 1429.5 & 14390.1 \\ \hline
         DE(D-E) & -3409.2 & 3221.24 & -1.05835 & 0.295307 & -9889.5 & 3071.1 \\ \hline
-    \end{tabular}
-    \label{tab:7}
-\end{table}
+%    \end{tabular}
+ %   \label{tab:7}
+%\end{table}
+\end{longtable}
+\end{center}
+}
+
 
 \emph{Note}: All the factors included in the cubic model. The cyan-marked values indicate a significance level below p = 0.05. Coeffs (recoded comps); Var.:UCS; R-sqr=.9678; Adj:.9445 (Resultat\_rev091123.sta). 5 Factor mixture design; Mixture total=1., 82 Runs. DV: UCS; MS Residual=232257.1
 
@@ -650,7 +722,7 @@ The remaining significant effects on day \nth{90} after the backward elimination
 \section{Conclusions}
 In this study, we demonstrated that blended binders perform better on soil stabilization, as compared to the single binders. The use of the experimental tests for optimal selection of binder combinations and binder amounts increases the possibilities of reducing financial risks of the project, which are possible if the soil is not sufficiently stabilized, as well as minimizing the environmental impact through the reduced amounts of cement by replacement from other binders. Because the costs of the laboratory tests are expensive, the optimization of blended binders is essential for high performance of soil in real projects, intended for road construction. In turn, the decisions based on the results of soil stabilization and evaluated soil strength support solutions for technical, economic and environmental processes. The trial planning also provides the support for assessing if optimal mixture is within a wide or narrow mixture range of binders. If the range of blended mixtures is narrow, then greater precision is required in the decisions, compared to cases with wide range. In contrast, if the range of binder choices is wide, other parameters, such as geotechnical of soil, economics or delivery security, can be decisive for final solutions.
 
-As demonstrated in this study, through the factor test combining blended binders of various mixtures, it is possible to investigate, under which circumstances two factors interact during the process of soil stabilization, so that the quality of the final product is not approved, e.g., if soil treatment takes place in the sub-area with a high contaminant content and high water content. Based on this procedure, tailored prevention strategies in road construction can be developed, e.g., by selectively increasing the amount of binders in the areas that constitute to the risk zones or regulating the permitted water ratio in the soil base material. From the geotechnical and engineering perspective in context of road or highway construction, soil stabilization should ideally have a lifespan of 80 years or more. From an environmental perspective, in case of contaminated soil, stabilization of specimens should have a risk-reducing effect over the significantly longer periods of time. 
+Through the factor test combining blended binders of various mixtures, it is possible to investigate, under which circumstances two factors interact during the process of soil stabilization, so that the quality of the final product is not approved, e.g., if soil treatment takes place in the sub-area with a high contaminant content and high water content. Based on this procedure, tailored prevention strategies in road construction can be developed, e.g., by selectively increasing the amount of binders in the areas that constitute to the risk zones or regulating the permitted water ratio in the soil base material. From the geotechnical and engineering perspective in context of road or highway construction, soil stabilization should ideally have a lifespan of 80 years or more. From an environmental perspective, in case of contaminated soil, stabilization of specimens should have a risk-reducing effect over the significantly longer periods of time. 
 
 In order to ensure that the final product meets the set requirements, both geotechnical construction of roads and physiochemical improvements of soil quality, despite the fact that the base material exhibits varying properties within the treatment surface, the robustness of the binder mixture can be tested within the factor test, as demonstrated above. using simplex design method of combinations of the binders as blended mixtures, as well as selecting single binders (Portland cement, lime, slag GGBFS type Merit 5000 and the two types of fly ash, energy and bio flay ash, originated from the SCA Lilla Edet and the from coal combustion (ISO certified).
 
@@ -663,6 +735,108 @@ The robustness of soil stabilization, as demonstrated in this study, means that 
 \authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. Conceptualization, methodology, software, validation, visualization, supervision -- Per Lindh; formal analysis, investigation, resources, data curation, project administration, funding acquisition -- Polina Lemenkova; writing---original draft preparation, Polina Lemenkova ; writing---review and editing, Per Lindh and Polina Lemenkova. All authors have read and agreed to the published version of the manuscript.}
 
 \funding{This research was funded by Materials Editorial Office of the MDPI, by providing 100\% APC fee waiver for publication of this manuscript.}
+
+\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
+\appendixstart
+\appendix
+\section[\appendixname~\thesection]{}
+\subsection[\appendixname~\thesubsection]{}
+
+{\scriptsize
+\begin{center}
+\begin{longtable}{|l|l|l|l|l|l|l|}
+\caption{Schedule of recipes for each specimen}\label{tab:app}\\    
+\hline
+\rowcolor{LightCyan}
+	Prov nr & Replicat & Cement & Lime & Slag & Flyash1 & Flyash2 \\ \hline
+\endhead
+        39 & 1 & 0.100000 & 0.100000 & 0.100000 & 0.600000 & 0.100000 \\ \hline
+        65 & 2 & 0.000000 & 0.000000 & 0.666667 & 0.000000 & 0.333333 \\ \hline
+        82 & 2 & 0.200000 & 0.200000 & 0.200000 & 0.200000 & 0.200000 \\ \hline
+        37 & 1 & 0.100000 & 0.600000 & 0.100000 & 0.100000 & 0.100000 \\ \hline
+        49 & 2 & 0.333333 & 0.000000 & 0.000000 & 0.666667 & 0.000000 \\ \hline
+        35 & 1 & 0.000000 & 0.000000 & 0.333333 & 0.333333 & 0.333333 \\ \hline
+        73 & 2 & 0.000000 & 0.333333 & 0.333333 & 0.333333 & 0.000000 \\ \hline
+        68 & 2 & 0.333333 & 0.333333 & 0.000000 & 0.333333 & 0.000000 \\ \hline
+        76 & 2 & 0.000000 & 0.000000 & 0.333333 & 0.333333 & 0.333333 \\ \hline
+        16 & 1 & 0.666667 & 0.333333 & 0.000000 & 0.000000 & 0.000000 \\ \hline
+        15 & 1 & 0.000000 & 0.000000 & 0.000000 & 0.333333 & 0.666667 \\ \hline
+        41 & 1 & 0.200000 & 0.200000 & 0.200000 & 0.200000 & 0.200000 \\ \hline
+        66 & 2 & 0.000000 & 0.000000 & 0.000000 & 0.666667 & 0.333333 \\ \hline
+        67 & 2 & 0.333333 & 0.333333 & 0.333333 & 0.000000 & 0.000000 \\ \hline
+        42 & 2 & 1.000000 & 0.000000 & 0.000000 & 0.000000 & 0.000000 \\ \hline
+        50 & 2 & 0.333333 & 0.000000 & 0.000000 & 0.000000 & 0.666667 \\ \hline
+        38 & 1 & 0.100000 & 0.100000 & 0.600000 & 0.100000 & 0.100000 \\ \hline
+        6 & 1 & 0.333333 & 0.666667 & 0.000000 & 0.000000 & 0.000000 \\ \hline
+        69 & 2 & 0.333333 & 0.333333 & 0.000000 & 0.000000 & 0.333333 \\ \hline
+        54 & 2 & 0.000000 & 0.000000 & 0.333333 & 0.666667 & 0.000000 \\ \hline
+        32 & 1 & 0.000000 & 0.333333 & 0.333333 & 0.333333 & 0.000000 \\ \hline
+        80 & 2 & 0.100000 & 0.100000 & 0.100000 & 0.600000 & 0.100000 \\ \hline
+        8 & 1 & 0.333333 & 0.000000 & 0.000000 & 0.666667 & 0.000000 \\ \hline
+        45 & 2 & 0.000000 & 0.000000 & 0.000000 & 1.000000 & 0.000000 \\ \hline
+        36 & 1 & 0.600000 & 0.100000 & 0.100000 & 0.100000 & 0.100000 \\ \hline
+        24 & 1 & 0.000000 & 0.000000 & 0.666667 & 0.000000 & 0.333333 \\ \hline
+        27 & 1 & 0.333333 & 0.333333 & 0.000000 & 0.333333 & 0.000000 \\ \hline
+        48 & 2 & 0.333333 & 0.000000 & 0.666667 & 0.000000 & 0.000000 \\ \hline
+        56 & 2 & 0.000000 & 0.000000 & 0.000000 & 0.333333 & 0.666667 \\ \hline
+        64 & 2 & 0.000000 & 0.000000 & 0.666667 & 0.333333 & 0.000000 \\ \hline
+        26 & 1 & 0.333333 & 0.333333 & 0.333333 & 0.000000 & 0.000000 \\ \hline
+        47 & 2 & 0.333333 & 0.666667 & 0.000000 & 0.000000 & 0.000000 \\ \hline
+        77 & 2 & 0.600000 & 0.100000 & 0.100000 & 0.100000 & 0.100000 \\ \hline
+        7 & 1 & 0.333333 & 0.000000 & 0.666667 & 0.000000 & 0.000000 \\ \hline
+        25 & 1 & 0.000000 & 0.000000 & 0.000000 & 0.666667 & 0.333333 \\ \hline
+        62 & 2 & 0.000000 & 0.666667 & 0.000000 & 0.333333 & 0.000000 \\ \hline
+        12 & 1 & 0.000000 & 0.333333 & 0.000000 & 0.000000 & 0.666667 \\ \hline
+        60 & 2 & 0.666667 & 0.000000 & 0.000000 & 0.000000 & 0.333333 \\ \hline
+        23 & 1 & 0.000000 & 0.000000 & 0.666667 & 0.333333 & 0.000000 \\ \hline
+        75 & 2 & 0.000000 & 0.333333 & 0.000000 & 0.333333 & 0.333333 \\ \hline
+        30 & 1 & 0.333333 & 0.000000 & 0.333333 & 0.000000 & 0.333333 \\ \hline
+        28 & 1 & 0.333333 & 0.333333 & 0.000000 & 0.000000 & 0.333333 \\ \hline
+        29 & 1 & 0.333333 & 0.000000 & 0.333333 & 0.333333 & 0.000000 \\ \hline
+        71 & 2 & 0.333333 & 0.000000 & 0.333333 & 0.000000 & 0.333333 \\ \hline
+        33 & 1 & 0.000000 & 0.333333 & 0.333333 & 0.000000 & 0.333333 \\ \hline
+        11 & 1 & 0.000000 & 0.333333 & 0.000000 & 0.666667 & 0.000000 \\ \hline
+        79 & 2 & 0.100000 & 0.100000 & 0.600000 & 0.100000 & 0.100000 \\ \hline
+        13 & 1 & 0.000000 & 0.000000 & 0.333333 & 0.666667 & 0.000000 \\ \hline
+        61 & 2 & 0.000000 & 0.666667 & 0.333333 & 0.000000 & 0.000000 \\ \hline
+        19 & 1 & 0.666667 & 0.000000 & 0.000000 & 0.000000 & 0.333333 \\ \hline
+        17 & 1 & 0.666667 & 0.000000 & 0.333333 & 0.000000 & 0.000000 \\ \hline
+        63 & 2 & 0.000000 & 0.666667 & 0.000000 & 0.000000 & 0.333333 \\ \hline
+        81 & 2 & 0.100000 & 0.100000 & 0.100000 & 0.100000 & 0.600000 \\ \hline
+        31 & 1 & 0.333333 & 0.000000 & 0.000000 & 0.333333 & 0.333333 \\ \hline
+        44 & 2 & 0.000000 & 0.000000 & 1.000000 & 0.000000 & 0.000000 \\ \hline
+        53 & 2 & 0.000000 & 0.333333 & 0.000000 & 0.000000 & 0.666667 \\ \hline
+        2 & 1 & 0.000000 & 1.000000 & 0.000000 & 0.000000 & 0.000000 \\ \hline
+        3 & 1 & 0.000000 & 0.000000 & 1.000000 & 0.000000 & 0.000000 \\ \hline
+        9 & 1 & 0.333333 & 0.000000 & 0.000000 & 0.000000 & 0.666667 \\ \hline
+        46 & 2 & 0.000000 & 0.000000 & 0.000000 & 0.000000 & 1.000000 \\ \hline
+        57 & 2 & 0.666667 & 0.333333 & 0.000000 & 0.000000 & 0.000000 \\ \hline
+        43 & 2 & 0.000000 & 1.000000 & 0.000000 & 0.000000 & 0.000000 \\ \hline
+        1 & 1 & 1.000000 & 0.000000 & 0.000000 & 0.000000 & 0.000000 \\ \hline
+        22 & 1 & 0.000000 & 0.666667 & 0.000000 & 0.000000 & 0.333333 \\ \hline
+        5 & 1 & 0.000000 & 0.000000 & 0.000000 & 0.000000 & 1.000000 \\ \hline
+        40 & 1 & 0.100000 & 0.100000 & 0.100000 & 0.100000 & 0.600000 \\ \hline
+        18 & 1 & 0.666667 & 0.000000 & 0.000000 & 0.333333 & 0.000000 \\ \hline
+        21 & 1 & 0.000000 & 0.666667 & 0.000000 & 0.333333 & 0.000000 \\ \hline
+        58 & 2 & 0.666667 & 0.000000 & 0.333333 & 0.000000 & 0.000000 \\ \hline
+        72 & 2 & 0.333333 & 0.000000 & 0.000000 & 0.333333 & 0.333333 \\ \hline
+        55 & 2 & 0.000000 & 0.000000 & 0.333333 & 0.000000 & 0.666667 \\ \hline
+        51 & 2 & 0.000000 & 0.333333 & 0.666667 & 0.000000 & 0.000000 \\ \hline
+        20 & 1 & 0.000000 & 0.666667 & 0.333333 & 0.000000 & 0.000000 \\ \hline
+        78 & 2 & 0.100000 & 0.600000 & 0.100000 & 0.100000 & 0.100000 \\ \hline
+        4 & 1 & 0.000000 & 0.000000 & 0.000000 & 1.000000 & 0.000000 \\ \hline
+        34 & 1 & 0.000000 & 0.333333 & 0.000000 & 0.333333 & 0.333333 \\ \hline
+        14 & 1 & 0.000000 & 0.000000 & 0.333333 & 0.000000 & 0.666667 \\ \hline
+        52 & 2 & 0.000000 & 0.333333 & 0.000000 & 0.666667 & 0.000000 \\ \hline
+        74 & 2 & 0.000000 & 0.333333 & 0.333333 & 0.000000 & 0.333333 \\ \hline
+        70 & 2 & 0.333333 & 0.000000 & 0.333333 & 0.333333 & 0.000000 \\ \hline
+        10 & 1 & 0.000000 & 0.333333 & 0.666667 & 0.000000 & 0.000000 \\ \hline
+        59 & 2 & 0.666667 & 0.000000 & 0.000000 & 0.333333 & 0.000000 \\ \hline
+\end{longtable}
+\end{center}
+}
+
+\emph{Note}: Replicate 2 is a double attempt.
 
 \institutionalreview{Not applicable}
 
