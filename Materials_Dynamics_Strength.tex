@@ -128,14 +128,35 @@ The decision regarding which binder mixture is optimal is based on a series of d
 Laboratory tests on binder proportions and combinations often entails higher costs, which is caused due to many trials in the initial stage. Using this method, high total cost of geotechnical works on soil stabilization intended for road construction can be significantly reduced. Since both the choice of binder components and binder quantities largely affect project economy, the price of works can be reduced in relation to the needs of real project. Therefore, to optimize binder mixtures we used modelling trial design techniques. The approach can be divided into a mixing part and a process control part. Mixture optimization included the mutual proportions of different binders in the final mixture, that is, the ratios of blended binders \cite{Lindh2001}. The process control optimization stage focuses on the question, how much binder should be used based on the properties of the base soil material, e.g., how much water should be added to balance the ratio and, if necessary, what is the level of contamination as environmental process parameters.
 
 \subsection{Optimization of binder mixture}
-For the two binders, the optimization process is a relatively simple and straightforward process. In this case, all the possible binder combinations can be placed on a straight line that can be described according to equation 1, Figure 1. As long as x or y < 1, the mixture consists of two parts. If x or y=1, the mixture consists of a single binder component. 
+For the two binders, the optimization process is a relatively simple and straightforward process. In this case, all the possible binder combinations can be placed on a straight line that can be described according to equation 1, Figure \ref{fig:01a}. As long as x or y < 1, the mixture consists of two parts. If x or y=1, the mixture consists of a single binder component. 
 
 \begin{equation}
 y = 1 - x
 \end{equation}
 
-Possible binder combinations with two different binders are represented by a straight line where the endpoints signify one binder, 1.0 = 100\%, i.e., a one-component mixture. Respectively, adding the \nth{2} binder automatically reduces the amount of the \nth{1} binder, so that together they always constitute a total amount of 100\%, see Figure 1. 
-However, for mixtures consisting of three or more binders, the situation becomes more complicated, as the optimal final mixture is hidden among the infinite number of possible mixture combinations. The experimental planning handles this case using simplex method. This method is developed in earlier statistical works \citep{Montgomery,MyersMontgomery} with a general aim to evaluate different types of mixtures with three or more constituent components, which is a very common optimization scenario in real case situations in industry. Figure 2 shows a graph representing all possible mixing ratios for the three components A, B and C, based on the simplex method. The corners represent 100\% of a single binder. The border lines represent mixtures between two different binders, equation (2)-(4). 
+Possible binder combinations with two different binders are represented by a straight line where the endpoints signify one binder, 1.0 = 100\%, i.e., a one-component mixture. Respectively, adding the \nth{2} binder automatically reduces the amount of the \nth{1} binder, so that together they always constitute a total amount of 100\%, see Figure \ref{fig:01a}. 
+
+\begin{figure}[H]
+     \centering
+     %\begin{subfigure}[b]{0.45\textwidth}
+     \begin{subfigure}{.48\linewidth}
+         \centering
+       	  	\includegraphics[width=5.2cm]{Fig_01a.jpg}
+         \caption{Two different binders.}
+         \label{fig:01a}
+     \end{subfigure} \hfill %\hspace{1mm}
+  %  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}{.48\linewidth}
+         \centering
+         	\includegraphics[width=7.5cm]{Fig_01b.jpg}
+         \caption{Three different binders.}
+         \label{fig:01b}
+     \end{subfigure}
+        \caption{Application of simplex lattice design showing possible binder combinations.}
+        \label{fig:01}
+\end{figure}
+
+However, for mixtures consisting of three or more binders, the situation becomes more complicated, as the optimal final mixture is hidden among the infinite number of possible mixture combinations. The experimental planning handles this case using simplex method. This method is developed in earlier statistical works \citep{Montgomery,MyersMontgomery} with a general aim to evaluate different types of mixtures with three or more constituent components, which is a very common optimization scenario in real case situations in industry. Figure \ref{fig:01b} shows a graph representing all possible mixing ratios for the three components A, B and C, based on the simplex method. The corners represent 100\% of a single binder. The border lines represent mixtures between two different binders, equation (2)-(4). 
 
 \begin{equation}
 y = 1 - x	
@@ -147,7 +168,7 @@ z = 1 - y
 x = 1 - z
 \end{equation}
 
-The plane bounded by the edge lines consists of infinitely many combinations of all three binders which can be experimentally mixed and tested. All the possible binder combinations with the three different binders (A, B and C) are represented by a plane bounded by the three straight lines (Figure 2). Here each vertex in the plane represents a single binder, i.e., 1.0 = 100\% of a single component \cite{MyersMontgomery}.
+The plane bounded by the edge lines consists of infinitely many combinations of all three binders which can be experimentally mixed and tested. All the possible binder combinations with the three different binders (A, B and C) are represented by a plane bounded by the three straight lines (Figure \ref{fig:01b}). Here each vertex in the plane represents a single binder, i.e., 1.0 = 100\% of a single component \cite{MyersMontgomery}.
 
 Depending on the scale and amount of works, chosen for simplex method, both linear effects and interaction effects can be identified. These include, for instance, an interaction effect which occurs when two binder components together produce a significantly higher or lower effect on soil strength than their mutual proportions indicate in advance. The level of details however, places different demands on the total number of tested trials. Therefore, the amount of experimental trails should always be reasonably high. The optimal combination of binders is required for the effective soil stabilisation in geotechnical and economic aspects.
 
@@ -156,6 +177,26 @@ The process control optimization examines how much binder must be added based on
 
 \subsection{Total binder optimization}
 In a total optimization stage, simplex experimental trials from the mixture optimization are combined in a factorial trials with process variables. In this case, the combined experimental set-up then becomes advanced, which is illustrated schematically in Figure 4. The advantage of this approach is that we find an optimum value both in terms of binder combination and binder quantity, based on the important process parameters. Otherwise, if we only investigate the optimum of stabilizing mixture, based on only binder combination, we may miss the unforeseen and unwanted influence from the external process parameters. Of course, the reverse applies if we only optimize binder amount based on the process parameters. This type of the total optimization gives us a robust basis for being able to vary both the binder combinations and the amount of binder in a project, without risking either final quality or project economics. As a result, the combined methodology adopted from \cite{Smith} provides both an optimal binder mix and an optimal binder quantity in relation to the process parameters.
+
+\begin{figure}[H]
+     \centering
+     %\begin{subfigure}[b]{0.45\textwidth}
+     \begin{subfigure}{.48\linewidth}
+         \centering
+       	  	\includegraphics[width=5.2cm]{Fig_02a.jpg}
+         \caption{}
+         \label{fig:01a}
+     \end{subfigure} \hfill %\hspace{1mm}
+  %  \begin{subfigure}[b]{0.45\textwidth}
+  \begin{subfigure}{.48\linewidth}
+         \centering
+         	\includegraphics[width=7.5cm]{Fig_02b.jpg}
+         \caption{}
+         \label{fig:01b}
+     \end{subfigure}
+        \caption{An example of a 2*2-factor experiment with binder quantity and water ratio as factors (a); An example of a 2*2-factor trial in combination with simplex trials (b).}
+        \label{fig:01}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
