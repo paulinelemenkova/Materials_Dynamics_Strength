@@ -7,9 +7,12 @@
 \graphicspath{{figures/}} % path to folder with figures
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{longtable}
 \usepackage{array}
-% For posting an early version of this manuscript as a preprint, you may use "preprints" as the journal and change "submit" to "accept". The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
+\usepackage{threeparttable}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{longtable}
+\usepackage{threeparttablex}
 
 %=================================================================
 % MDPI internal commands
@@ -24,6 +27,7 @@
 \copyrightyear{2022}
 \usepackage{color, colortbl}
 \definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{turquoise}{RGB}{0,206,209}
 %\externaleditor{Academic Editor: Firstname Lastname}
 \datereceived{18 October 2022} 
 %\daterevised{} % Only for the journal Acoustics
@@ -298,27 +302,32 @@ Figure \ref{fig:07} furthermore shows that the two binary binders lime / slag an
 The results from the measured P-wave velocities indicating strength gain (UCS) are reported below in Tables 1 to 8 for days 7, 14, 28 and 90, as well as the remaining values for the same days, respectively. 
 The analysis of Table \ref{tab:1}, which shows measured values of P-waves on the day \nth{7} of curing period of stabilized soil gives the following remarks. Presence of cement and energy fly ash (combination AD) influences the stabilization characteristics of a soil with P-waves (coefficient 2408.8) by T=47°C. Likewise, the addition of lime and slag (combination BC) into soil results in the increase of P-wave coefficient up to 5474.4. The compound of lime and slag acts as an accelerator for soil hardening and in their presence increase the strength gain. 
 
-%\begin{table}[!ht]
-%\begin{table}[H]
-%\caption{The effects from various binders on soil stabilization on day \nth{7} of curing time, measured by P-wave velocities}
-%\footnotesize
-   % \centering
-    %\begin{tabular}{|l|l|l|l|l|l|l|}
-    %\hline
- {\footnotesize
-\begin{center}
+\begin{ThreePartTable}
+  \begin{TableNotes} 
+  \scriptsize
+  	\item \emph{Note for Table 1}. Factors are the combinations of binders. All the factors are included in the cubic model. The cyan-marked rows indicate a significance level of values below the p = 0.05. The coefficients for recoded computations are as follows: Var.:Vp\_rod\_7; R-sqr=.8806; Adj:.7942 (Resultat\_rev091123.sta). 5 Factor mixture design; Mixture total=1., 82 runs. DV: Vp\_rod\_7; MS Residual=95430.29. \hl{Std. Err. is a standard error (standard deviation of sample distribution)}.
+ \end{TableNotes}
+
+\begin{footnotesize}
 \begin{longtable}{|l|l|l|l|l|l|l|}
 \caption{The effects from various binders on soil stabilization on day \nth{7} of curing time, measured by P-wave velocities}\label{tab:1}\\    
 \hline
 %\rowcolor{LightCyan}
-	Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+	Factors & P-wave coeff. & Std. Err. & T=47°C & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
 \endfirsthead
+
+\midrule
+\multicolumn{6}{r}{{Continued on next page}} \\
+\midrule
+\endfoot
+\bottomrule
+\insertTableNotes
+\endlastfoot
 
 \multicolumn{7}{c}%
 {{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-	Factors & P-wave coeff. & Std. Err. & t(47) & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
+	Factors & P-wave coeff. & Std. Err. & T=47°C & p & -95.\% Cnf. Limt & +95.\% Cnf. Limt \\ \hline
 \endhead
-
         \rowcolor{LightCyan}
         (A) Cement & 2538.3 & 217.223 & 11.68544 & 0.000000 & 2101.4 & 2975.35 \\ \hline
         \rowcolor{LightCyan}
@@ -359,23 +368,17 @@ The analysis of Table \ref{tab:1}, which shows measured values of P-waves on the
         BC(B-C) & -2271.6 & 2064.817 & -1.10012 & 0.276881 & -6425.4 & 1882.32 \\ \hline
         BD(B-D) & -265.0 & 2064.817 & -0.12835 & 0.898421 & -4418.9 & 3888.86 \\ \hline
         BE(B-E) & 3986.1 & 2064.817 & 1.93050 & 0.059591 & -167.7 & 8140.01 \\ \hline
-        CD(C-D) & -277.3 & 2064.817 & -0.13429 & 0.893750 & -4431.2 & 3876.60 \\ \hline
+        CD(-D) & -277.3 & 2064.817 & -0.13429 & 0.893750 & -4431.2 & 3876.60 \\ \hline
         CE(C-E) & 75.9 & 2064.817 & 0.03677 & 0.970822 & -4077.9 & 4229.81 \\ \hline
         DE(D-E) & 528.2 & 2064.817 & 0.25583 & 0.799196 & -3625.6 & 4682.13 \\ \hline
-%    \end{tabular}
- %   \label{tab:1}
-%\end{table}
 \end{longtable}
-\end{center}
-}
-
-\emph{Note}: All the factors are included in the cubic model. The cyan-marked rows indicate a significance level of values below the p = 0.05. Coeffs (recoded comps); Var.:Vp\_rod\_7; R-sqr=.8806; Adj:.7942 (Resultat\_rev091123.sta). 5 Factor mixture design; Mixture total=1., 82 Runs. DV: Vp\_rod\_7; MS Residual=95430.29. Factors are the combinations of binders.
+\end{footnotesize}
+\end{ThreePartTable}
 
 Correspondingly, adding slag (GGBFS) and bio fly ash (combination CE) leads to bonding soil particles, which is also important in providing higher particle friction and better packing. As a result, soil strength increases which is reflected in speed of the elastic waves (P-wave coefficient=2453.1). The measurements were done by T=47°C for all the data in Table \ref{tab:1}. Depending on the amount of added slag (type Merit) and Portland cement, bonding soil particles generally increases the UCS values compared to that in the fly ashes, which demonstrated poor or low effects. The improvement is introduced by glueing of soil particles with cementitious binder at the points of contact by stabilizing agents. 
 
 Similarly, the combination AE (cement and bio flay ash) also increased the soil strength, as the stabilizer content was increased in specimens. This results in P-wave coefficient reaching 5648.6 m/s. As for triple blends, upon exposure to added slag GGBFS and cement into binder blends, the compressive strength of a stabilized soil is gradually increased after the day \nth{28}. This proves the important role of cement and lime for stabilization. Thus, the rate of increase may vary for blends ACD – cement / slag / fly ash (P-wave coeff =13776.3 m/s), ABE – cement / lime / bio fly ash (P-wave coeff.=5768.0), combination ABD – cement / lime / energy fly ash (P-wave coeff.=4591.6). Mechanically, a sandy soil system, when stabilized with either Portland cement, GGBFS or lime, provides improved shear and compressive strength, expressed in UCS, as also reflected in P-waves values. Table \ref{tab:2} shows the remaining notable effects on day \nth{7} of curing period after backward elimination. Here the combination AE (cement / bio fly ash) demonstrated the highest values of P-wave coefficient (5213.9) followed by the blend BC (lime / slag) with the P-wave coefficient of 4311.8.
 
-%\begin{table}[!ht]
 \begin{table}[H]
 \caption{Remaining significant effects on day \nth{7} after the backward elimination.}
 \footnotesize
