@@ -16,7 +16,7 @@
 \usepackage{multicol,booktabs}
 \setlength{\columnsep}{1cm}
 \usepackage{adjustbox}
-\usepackage{graphicx}
+\usepackage{tabularx}
 
 %=================================================================
 % MDPI internal commands
@@ -768,12 +768,39 @@ In order to ensure that \hl{final} product meets \hl{the approved} requirements,
 The robustness of soil stabilization\hl{ }means that\hl{ }final binder mixture is able to provide the approved geotechnical and environmental quality of soil intended for road construction. This is necessary both for the short-term and long-term period of curing under all the conditions prevailing in \hl{soil} treatment. The procedure of \hl{stabilization} can lead to the unnecessarily high binder costs and increase climate emissions through the binder's production chain (especially for \hl{OPC}) or the unnecessarily high technical performance given the basic requirements that govern the quality of the final product. In the traditional tests that consider only one factor at a time, the robustness of blending binder is often handled by the increased amount of binder, so that the results of the provided experiment ensure the avoided uncertainties that may exist: the individual physiochemical properties of soil and local environmental conditions of real project, e.g., specifics of roads and local climate. \hl{In this paper, we designed adaptation algorithms for selecting optimal binder combinations using simplex design combinatorics to improve soil properties and geotechnical parameters through stabilization for industrial projects of road and highway construction.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{6pt} 
+%\vspace{6pt} 
 
+\abbreviations{Abbreviations}{
+The following abbreviations are used in this manuscript:\\
+
+\noindent 
+\begin{tabular}{@{}ll}
+CHP & Combined Heat and Power \\
+GGBFS & Ground Granulated Blast Furnace Slag \\
+ICP & Integrated Circuit Piezoelectric \\
+ISO & International Organization for Standardization \\
+OPC & Ordinary Portland Cement \\
+PCB & PicoCoulomB \\
+SGI & Swedish Geotechnical Institute \\
+SIS & Swedish Institute for Standards \\
+UCS & Unconfined/Uniaxial Compressive Strength \\
+USCS & Unified Soil Classification System \\
+\end{tabular}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. Conceptualization, methodology, software, validation, visualization, supervision -- Per Lindh; formal analysis, investigation, resources, data curation, project administration, funding acquisition -- Polina Lemenkova; writing---original draft preparation, Polina Lemenkova ; writing---review and editing, Per Lindh and Polina Lemenkova. All authors have read and agreed to the published version of the manuscript.}
+\authorcontributions{For research articles with several authors, a short paragraph specifying their individual contributions must be provided. Conceptualization, methodology, software, validation, visualization, supervision -- P. Lindh; formal analysis, investigation, resources, data curation, project administration, funding acquisition -- P. Lemenkova; writing---original draft preparation, P. Lemenkova ; writing---review and editing, P. Lindh and P. Lemenkova. All authors have read and agreed to the published version of the manuscript.}
 
 \funding{This research was funded by Materials Editorial Office of the MDPI, by providing 100\% APC fee waiver for publication of this manuscript.}
+
+\institutionalreview{Not applicable}
+
+\informedconsent{Not applicable}
+
+\dataavailability{Not applicable} 
+
+\acknowledgments{The authors are thankful to the three anonymous reviewers for their comments and remarks which improved both text and graphics in the initial version of the manuscript.}
+
+\conflictsofinterest{The authors declare no conflict of interest.} 
 
 \appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
 \appendixstart
@@ -784,9 +811,12 @@ The robustness of soil stabilization\hl{ }means that\hl{ }final binder mixture i
 \begin{table}[H] 
 \begin{scriptsize}
 \caption{Schedule of \hl{the} recipes for each \hl{soil} specimen. Replicate 2 is a double attempt.}
-\begin{minipage}{0.40\textwidth}
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\begin{minipage}{0.40\linewidth}
+%\begin{tabular}{|l|l|l|l|l|l|l|}
+\resizebox{.7\linewidth}{!}{%
+\begin{tabularx}{\linewidth}{@{} |l|l|l|l|l|l|l|}
 \toprule
+ \rowcolor{LightCyan}
 PN & R & Cement & Lime & Slag & Flyash1 & Flyash2 \\ \hline
 \midrule
 39 & 1 & 0.100000 & 0.100000 & 0.100000 & 0.600000 & 0.100000 \\ \hline
@@ -832,13 +862,20 @@ PN & R & Cement & Lime & Slag & Flyash1 & Flyash2 \\ \hline
         30 & 1 & 0.333333 & 0.000000 & 0.333333 & 0.000000 & 0.333333 \\ \hline
 	\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\ 
 \bottomrule
-\end{tabular}
-\end{minipage} \hfill
-\begin{minipage}{0.40\textwidth}
-\begin{tabular}{|l|l|l|l|l|l|l|}
+\end{tabularx}
+%\end{tabular}
+}
+\end{minipage}
+\hspace{1.5cm}%
+\begin{minipage}{0.40\linewidth}
+%\begin{tabular}{|l|l|l|l|l|l|l|} 
+\resizebox{.7\linewidth}{!}{%
+\begin{tabularx}{\linewidth}{@{} |l|l|l|l|l|l|l|}
 \toprule
-PN & R & Cement & Lime & Slag & Flyash1 & Flyash2 \\ \hline
+\rowcolor{LightCyan}
+PN & R & Cement & Lime & Slag & Flyash1 & Flyash2 \\ %\hline
 \midrule
+%	\hline
 	\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots \\     
         28 & 1 & 0.333333 & 0.333333 & 0.000000 & 0.000000 & 0.333333 \\ \hline
         29 & 1 & 0.333333 & 0.000000 & 0.333333 & 0.333333 & 0.000000 \\ \hline
@@ -882,39 +919,13 @@ PN & R & Cement & Lime & Slag & Flyash1 & Flyash2 \\ \hline
         10 & 1 & 0.000000 & 0.333333 & 0.666667 & 0.000000 & 0.000000 \\ \hline
         59 & 2 & 0.666667 & 0.000000 & 0.000000 & 0.333333 & 0.000000 \\ \hline
 \bottomrule
-\end{tabular}
+\end{tabularx}
+%\end{tabular}
+}
 \end{minipage}
 \end{scriptsize}
 \end{table}
 %--------------------<
-
-\institutionalreview{Not applicable}
-
-\informedconsent{Not applicable}
-
-\dataavailability{Not applicable} 
-
-\acknowledgments{The authors are thankful to the three anonymous reviewers for their comments and remarks which improved both text and graphics in the initial version of the manuscript.}
-
-\conflictsofinterest{The authors declare no conflict of interest.} 
-
-\abbreviations{Abbreviations}{
-The following abbreviations are used in this manuscript:\\
-
-\noindent 
-\begin{tabular}{@{}ll}
-CHP & Combined Heat and Power \\
-GGBFS & Ground Granulated Blast Furnace Slag \\
-ICP & Integrated Circuit Piezoelectric \\
-ISO & International Organization for Standardization \\
-OPC & Ordinary Portland Cement \\
-PCB & PicoCoulomB \\
-SGI & Swedish Geotechnical Institute \\
-SIS & Swedish Institute for Standards \\
-UCS & Unconfined/Uniaxial Compressive Strength \\
-USCS & Unified Soil Classification System \\
-\end{tabular}
-}
 
 %\pagebreak
 \reftitle{References}
